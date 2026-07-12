@@ -52,9 +52,9 @@ select:focus{outline:none;border-color:var(--accent)}
 .resline{color:var(--muted);font-size:13px;margin:12px 0 0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .resline b{color:var(--ink)}
 .notes{display:flex;flex-direction:column;gap:6px;margin:10px 0 0}
-.note{border-radius:12px;padding:9px 14px;font-size:12.5px}
+.note{border-radius:12px;padding:9px 14px;font-size:12.5px;overflow-wrap:anywhere;word-break:break-word;line-height:1.6}
 .note.apc{background:#fffdf5;border:1px solid #f2e6b8;color:#7a5b00}
-.note.risk{background:#fef2f2;border:1px solid #fbcfcf;color:#8a1c1c}
+.note.n-risk{background:#fef2f2;border:1px solid #fbcfcf;color:#8a1c1c}
 .note a{color:var(--accent)}
 .tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin:12px 0 28px}
 .scroller{overflow-x:auto}
@@ -157,7 +157,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 40px;line-height:1.7}
 <div class="wrap">
   <div class="resline"><span>顯示 <b id="cnt">0</b> 本期刊</span><span id="usercnt" class="hint"></span></div>
   <div class="notes">
-    <div class="note risk">🚩 <strong>加強實質審查（高風險）</strong>依台大醫學院「加強實質審查期刊」政策與高雄醫學大學 2025 名單標示：<strong>類別一</strong>＝MDPI、Frontiers、Hindawi、Baishideng、OMICS 等出版社所發行期刊；<strong>類別二</strong>＝列入高醫個別期刊名單者。此標示反映升等／學位審查會被<strong>加強審查</strong>，非期刊品質定論，投稿前請自行評估。來源：<a href="https://rd.mc.ntu.edu.tw/bomrd/ntu2/news_txt.asp?pno=5512" target="_blank" rel="noopener">台大醫學院公告</a>、高醫加強實質審查期刊名單(2025)。</div>
+    <div class="note n-risk">🚩 <strong>加強實質審查（高風險）</strong>依台大醫學院「加強實質審查期刊」政策與高雄醫學大學 2025 名單標示：<strong>類別一</strong>＝MDPI、Frontiers、Hindawi、Baishideng、OMICS 等出版社所發行期刊；<strong>類別二</strong>＝列入高醫個別期刊名單者。此標示反映升等／學位審查會被<strong>加強審查</strong>，非期刊品質定論，投稿前請自行評估。來源：<a href="https://rd.mc.ntu.edu.tw/bomrd/ntu2/news_txt.asp?pno=5512" target="_blank" rel="noopener">台大醫學院公告</a>、高醫加強實質審查期刊名單(2025)。</div>
     <div class="note apc">📌 APC 與出版模式為<strong>推估／參考值</strong>（依出版社判斷）；投稿與費用請以期刊官網為準。點「查 APC」「投稿頁」可即時查官方資訊，或用「編輯」存成你自己的紀錄。</div>
   </div>
   <div class="tablewrap"><div class="scroller">

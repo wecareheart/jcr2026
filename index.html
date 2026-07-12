@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>我的期刊投稿追尋 · JCR 2026</title>
+<title>我的期刊投稿決策台 · JCR 2026</title>
 <style>
 :root{
   --bg:#f5f6f8; --panel:#fff; --ink:#1e2430; --muted:#6b7280; --line:#e6e8ee;
@@ -18,8 +18,8 @@ body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSys
 a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
 .wrap{max-width:1360px;margin:0 auto;padding:0 20px}
 .topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line)}
-.topbar .wrap{display:flex;align-items:center;gap:14px;height:60px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px}
+.topbar .wrap{display:flex;align-items:center;gap:12px;min-height:60px;padding:9px 20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;white-space:nowrap}
 .brand .logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#4f46e5,#0891b2);color:#fff;display:grid;place-items:center;font-size:15px;font-weight:800}
 .brand small{display:block;font-weight:500;color:var(--muted);font-size:11px}
 .top-actions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
@@ -99,11 +99,25 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 40px;line-height:1.7}
 .modal h3{margin:0 0 10px} .modal p,.modal li{font-size:13.5px;color:#374151}
 .modal .x{float:right;cursor:pointer;color:var(--muted);font-size:20px;border:0;background:none}
 @media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr)} .hero h1{font-size:24px}}
+@media(max-width:680px){
+  .topbar{position:static}
+  .topbar .wrap{gap:8px 10px}
+  .brand{font-size:15px}
+  .brand small{font-size:10.5px}
+  .top-actions{width:100%;gap:6px}
+  .btn{font-size:12px;padding:6px 9px}
+  .controls{position:static;padding-top:12px}
+  .controls .wrap{gap:8px}
+  .search{flex:1 1 100%}
+  select{max-width:none;flex:1 1 46%}
+  .hero{padding:22px 0 14px}
+  .stats .num{font-size:21px}
+}
 </style>
 </head>
 <body>
 <div class="topbar"><div class="wrap">
-  <div class="brand"><span class="logo">📊</span><span>我的期刊投稿追尋<small>JCR 2026 · 2025 Journal Impact Factor</small></span></div>
+  <div class="brand"><span class="logo">📊</span><span>我的期刊投稿決策台<small>JCR 2026 · 2025 Journal Impact Factor</small></span></div>
   <div class="top-actions">
     <button class="btn" onclick="doImport()">↥ 匯入我的資料</button>
     <button class="btn" onclick="exportCSV()">⤓ 匯出 CSV</button>
